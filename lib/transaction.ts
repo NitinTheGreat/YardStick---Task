@@ -1,5 +1,10 @@
 import mongoose, { type Model } from "mongoose"
-import type { Transaction } from "../types"
+interface Transaction {
+  amount: number;
+  description: string;
+  date: Date;
+  category?: string;
+}
 
 const transactionSchema = new mongoose.Schema(
   {
